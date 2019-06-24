@@ -1,0 +1,11 @@
+k=input()
+square=[0,1,4]
+alpha=['',1]
+beta=['','']
+for n in range(2,int(k)):
+    alpha.append(int(square[n])-int(square[n-1]))
+    beta.append(int(alpha[n])-int(alpha[n-1]))
+    square.append(int(square[n])+int(alpha[n])+int(beta[n]))
+print('n','n^2','一阶差分','二阶差分')
+for n in range(0,int(k)):
+    print(n,square[n],alpha[n],beta[n])
